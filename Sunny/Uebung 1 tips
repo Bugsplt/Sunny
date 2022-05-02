@@ -1,0 +1,267 @@
+﻿tips:
+
+Aufgabe 1
+Um irgendwas auf der console auszugeben benutzt man in javascript console.log()
+
+Zum beispiel
+
+console.log("hi)
+
+ergibt:
+___________________________________________      //zwischen diese zeilen
+hi
+___________________________________________      //zwischen diese zeilen
+auf der console
+
+
+
+Aufgabe 2
+console.log() fuegt am ende ein 'breakline' (enter) zu in der console.
+Zum beispiel:
+console.log("Hello")
+console.log("World")
+ergibt:
+___________________________________________      //zwischen diese zeilen
+Hello
+World
+___________________________________________      //zwischen diese zeilen
+
+\ wird in javascript als escape character benutzt.
+Damit 'escaped' man die standard functionalitaet von das was direct danacht kommt um so extra moeglichkeiten zu haben.
+
+Zum beispiel 
+console.log("Hello .\n. World")
+ergibt:
+___________________________________________      //zwischen diese zeilen
+Hello .
+. World
+___________________________________________      //zwischen diese zeilen
+und 
+console.log("Hello \\ World")
+ergibt:
+___________________________________________      //zwischen diese zeilen
+Hello \ World
+___________________________________________      //zwischen diese zeilen
+(Die escape functionalitaet des zweiten \ wird durch das erste \ 'escaped' und wird in diesem fall dadurch im string als standard \ character gesehen)
+
+
+
+Aufgabe 3
+Um eine variabele zu declarieren benutzt man in javascript unter anderem let, const und var. Ich wuerde in erster instanz let benutzen.
+Ner variabele enthaelt data, dies kann man im code benutzen oder aendern.
+
+Zum beispiel
+let variable;
+variable = 13;
+variable = variable + 13;
+console.log(variable);
+ergibt:
+___________________________________________      //zwischen diese zeilen
+26
+___________________________________________      //zwischen diese zeilen
+
+(variable steht hier nicht zwischen " " sonst wuerde variable als string ausgegeben werden anstatt das der inhalt der variabele ausgelesen wird)
+
+
+let variable;
+variable = 13;
+
+kann kuerzer: 
+
+let variable = 13;
+
+
+
+Aufgabe 4
+Weil x und y in die parameter der function geliefert werden muessen sie nicht mehr instantiiert werden (kein let x oder let y).
+
+function writeName(name){
+    console.log(name);
+}
+let variable = "some name";
+
+writeName("testName");
+writeName(variable)
+
+ergibt:
+___________________________________________      //zwischen diese zeilen
+testName
+some name
+___________________________________________      //zwischen diese zeilen
+
+
+
+Aufgabe 5
+Du kannst es dir leichter machen durch ne dritte variabele zu benutzen um den wert eins der variabelen zu verwaren.
+
+
+
+Aufgabe 6
+Um code nur in bestimmte faelle auszufuehren kannst du if(){} benutzen.
+
+Wenn mann if benutzt hat man zwei gebiete:
+1 das gebiet wo man sagt was wahr sein sollte.
+2 das gebiet wo der code steht der nur dann ausgefuert wird wenn das was in gebiet 1 steht wahr ist.
+
+Du kannst auch code nur dann ausfueren wenn das was du in dein if statement pruefst falsch ist. Dafuer benutzt mann else.
+3 das gebiet  wo der code steht der nur dann ausgefuert wird wenn das was in gebiet 1 steht nicht wahr ist.
+
+if (1)
+{
+    2
+}
+else 
+{
+    3
+}
+
+Zum beispeil:
+function checkForTen(x){
+    if (x === 10)                                       //Das anzahl der = zeichen hat ne bedeutung 1 = sorgt dafuer dass du eine variabele inhalt gibst ( x = 1 gibt x den wert 1)
+    {                                                   //2 = sorgt dafuer dass du den inhalt vergleichst ( x = 1; x == 1 ist wahr)
+        console.log("Input is 10")                      //3 = is fast gleicht an 2 = nur controlliert das auch der art von inhalt und nicht nur den inhalt
+    }                                                   //(x = 1;   x == "1" ergibt wahr aber x === "1" ergibt falsch weil x eine zahl 1 ist und "1" ein string "1")
+    else 
+    {
+        console.log("Input is not 10")
+    }
+}
+
+checkForTen(3);
+ergibt:
+___________________________________________      //zwischen diese zeilen
+Input is not 10
+___________________________________________      //zwischen diese zeilen
+
+
+checkForTen(10);
+ergibt:
+___________________________________________      //zwischen diese zeilen
+Input is 10
+___________________________________________      //zwischen diese zeilen
+
+Mann kann sogar else combinieren mit noch ein if durch else if zu benutzen, dass sieht dann zum beispiel so aus:
+if (1)
+{
+    2
+}
+else if (3)
+{
+    4
+} else 
+{
+    5
+}
+In diesem fall wird der code in gebiet 4 nur dann ausgefuert wenn 1 nicht wahr ist und 3 wahr ist.
+Der code in gebiet 5 wird nur dann ausgefuert wenn 1 und 3 beide nicht wahr sind.
+
+
+Aufgabe 7
+Anstatt if else if
+if()
+{
+}
+else if()
+{
+}
+else if()
+{
+} 
+else if() etc....
+
+Kannst du auch ein switch benutzen:
+
+switch(1)
+{
+    case 2:
+        3
+        break;
+    case 2:
+        3
+        break;
+    case 2:
+        3
+        break;
+    default:
+        3
+        break;   
+}
+
+Dies kann uebersichtlicher sein.
+
+1 hier steht eine variabele wovon abhaengt welche der cases stimmt
+2 hier stehen werte die mit 1 verglichen werden 
+3 code der ausgefuert wird wenn der case 2 drueber stimmt
+
+break; sorgt dafuer dass der switch nicht mer weiter vergleicht. 
+
+Ist meistens recht egal welches mann benutzt also benutze was dir lieber ist!
+
+
+
+Aufgabe 8
+Wenn du ein switch benutzt vergiss nicht das default: am ende benutzt werden kann um alle restfaelle aufzufangen.
+
+
+
+Aufgabe 9
+Fuer diese aufgabe kann es nuetzlich sein um zu wissen ob ne zahl ganz teilbar ist durch ne andere zahl.
+Zum beispiel kann mann 20 teilen durch 4? 
+Dafuer kannst du % benutzen. % ist im code ein operand wie + - / * = etc.
+% gibt dir den restwert nach ner teilung der zahlen:
+
+    5 % 4 = 1
+    6 % 4 = 2
+    7 % 4 = 3
+    8 % 4 = 0
+    
+Das heist wenn x % 4 = 0 weist du dass x ne zahl ist die mann durch 4 teilen kann.  
+
+
+Ob ein jahr ein leapyear ist haengt ab von diese bedingungen:
+jahr                                = kein leapyear
+ausser es ist teilbar durch 4       = leapyear
+ausser es ist teilbar durch 100     = kein leapyear
+ausser es ist teilbar durch 400     = leapyear
+
+
+
+Aufgabe 10
+Mann muss es nicht unbedingt so machen aber du kannst ner bestimmte position in eine variabele auslesen durch [] zu benutzen.
+
+Zum beispiel:
+let randomNumber = 1234567;
+console.log(randomnumber);
+console.log(randomnumber[0]);
+console.log(randomnumber[6]);
+let randomString = "some words here";
+console.log(randomString);
+console.log(randomString[3]);
+console.log(randomString[5]);
+
+ergibt:
+___________________________________________      //zwischen diese zeilen
+1234567
+1
+7
+some words here
+                                                                         <-- da steht ein " "
+o
+___________________________________________      //zwischen diese zeilen
+
+Mit [] faengt das zaehlen bei 0 an also 0 ist die erste position 1 die zweite etc. 
+
+Mann kann strings ans eindander zufuegen mit + 
+zum beispiel:
+let word1 = "Hel";
+let word2 = "lo";
+let word3 = word1 + word2;
+console.log(word3);
+
+ergibt:
+___________________________________________      //zwischen diese zeilen
+Hello
+___________________________________________      //zwischen diese zeilen
+
+Sorge dafuer dass deine zahlen als string behandelt werden wenn du versuchst zahlen an einander zu zu fuegen. 
+Es kann schnell passieren das mann die wehrte ausversehen addiert.
