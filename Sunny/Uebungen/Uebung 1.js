@@ -28,15 +28,23 @@ function addTwoNumbers(x, y) {
 
 //todo Task 5
 function swapTwoNumbers(x, y) {
+    console.log("Before Swap:");
+    console.log("x: " + x);
+    console.log("y: " + y);
     //Input solution here   V
   
     //Input solution here   ^
+    console.log("After Swap:");
+    console.log("x: " + x);
+    console.log("y: " + y);
 }
 
 //todo Task 6
 function compareTwoNumbers(x, y) {
     //Input solution here   V
-   
+    console.log(x + " = " + y)
+    console.log(x + " > " + y)
+    console.log(x + " < " + y)
     //Input solution here   ^
 }
 
@@ -50,7 +58,19 @@ function ratingSalesPerson(revenue) {
 //todo Task 8
 function getCommissionRate(comissionClass) {
     //Input solution here   V
- 
+    switch (comissionClass) {
+        case 1: {
+            console.log("Your Commission Rate was set to 0.01");
+            break;
+        }
+        case 2: {
+            
+            break;
+        }
+        
+        default: 
+           
+    }
     //Input solution here   ^
 }
 
